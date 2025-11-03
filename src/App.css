@@ -1,0 +1,15 @@
+.App {
+    padding: 10vh;
+}
+
+.crossword-container {
+    display: flex;
+    width: 100vh;
+    margin: auto;
+    border-width: 1px;
+    border: black;
+}
+
+.clue {
+    padding: 0.5vh;
+}
