@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import './App.css';
 import Crossword from '@jaredreisinger/react-crossword';
 import GameStateModal from "./components/GameStateModal";
+import Timer from "./components/Timer";
 
 function App() {
     const crosswordStyles = {
@@ -10,10 +11,12 @@ function App() {
     };
     const [showModal, setShowModal] = useState(false);
     const [showModalAgain, setShowModalAgain] = useState(true);
+    // modalTime is now derived inside GameStateModal from localStorage
 
     const crossword = useRef(null);
     const articlePreview = "Time to take the North and never give it back";
     const articleLink = "https://dailyillini.com/sports-stories/mens-sports/football/2025/11/08/column-take-the-north/";
+    const date = "TODAY";
     const data = {
         across: {
             1: {
@@ -41,13 +44,17 @@ function App() {
         }
     }
 
+        // GameStateModal now reads and formats the stored time directly from localStorage
+
     return (
         <div className="App">
+            <Timer running={showModalAgain} />
             <GameStateModal 
                 showModal={showModal}
                 setShowModal={setShowModal} 
                 article={articlePreview} 
-                link={articleLink} />
+                link={articleLink}
+                date={date} />
             <div className="crossword-container">
                 <Crossword data={data} theme={crosswordStyles} onCrosswordCorrect={onCrosswordCorrect} ref={crossword}/>
             </div>
