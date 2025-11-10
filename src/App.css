@@ -15,12 +15,12 @@
     padding: 1.5vh;
     margin: 3vh;
     border-width: 1px;
-    border: solid #b5b5b5;
+    border: solid #ccc;
     border-radius: 1rem;
 }
 
 .modal a:hover {
-    background-color: #b5b5b5;
+    background-color: #ccc;
 }
 
 .crossword-container {
@@ -33,4 +33,12 @@
 
 .clue {
     padding: 0.5vh;
+}
+
+.timer {
+    text-align: left;
+    display: flex;
+    margin: auto;
+    width: 100vh;
+    padding: 1vh;
 }
