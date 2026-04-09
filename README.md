@@ -1,4 +1,4 @@
-# The _Daily Illini_'s Mini Crossword
+# The Daily Illini's Mini Crossword
 
 ## Dependencies
 
